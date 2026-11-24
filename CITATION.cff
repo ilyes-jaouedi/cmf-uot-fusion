@@ -3,7 +3,7 @@ message: "If you use this code, please cite the article below."
 title: "cmf-uot-fusion: sensor array and camera fusion via unbalanced optimal transport"
 version: 1.0.0
 license: MIT
-repository-code: "https://github.com/OWNER/cmf-uot-fusion"
+repository-code: "https://github.com/ilyes-jaouedi/cmf-uot-fusion"
 authors:
   - family-names: Jaouedi
     given-names: Ilyes

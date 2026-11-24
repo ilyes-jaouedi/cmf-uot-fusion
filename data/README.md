@@ -6,7 +6,7 @@ Recordings used in *On Sensor Array and Camera Fusion via Unbalanced Optimal Tra
 - **License:** CC BY 4.0
 - **Size:** 7.1 GB (45 recordings of 157 MB each, plus camera and calibration files)
 
-With the code repository (https://github.com/OWNER/cmf-uot-fusion), run `poetry run python -m cmf_uot.download` (add `--paper-only` for the 0.5 GB used in the article). Zenodo stores the files without folders; the download command puts them back in `waves/`, `camera_detections/` and `images/` (mapping in `folders.json`) and checks them against `checksums.sha256`. To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/folder`.
+With the code repository (https://github.com/ilyes-jaouedi/cmf-uot-fusion), run `poetry run python -m cmf_uot.download` (add `--paper-only` for the 0.5 GB used in the article). Zenodo stores the files without folders; the download command puts them back in `waves/`, `camera_detections/` and `images/` (mapping in `folders.json`) and checks them against `checksums.sha256`. To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/folder`.
 
 Recorded on 23 July 2025. The published images have their GPS metadata removed, and a passer-by seen through a window in `ref_3.jpg` is blurred.
 
@@ -19,7 +19,7 @@ Recorded in a gymnasium at CentraleSupélec (Gif-sur-Yvette, France).
 | Microphone array | 32 MEMS microphones on four horizontal lines, about 1 m × 0.6 m, irregular spacing |
 | Sources | 4 omnidirectional broadband loudspeakers (Visaton BF32, 150 Hz–20 kHz) emitting white noise |
 | Camera | smartphone camera, images 4080 × 3072 px |
-| Sampling rate | **TO CONFIRM** (50 kHz assumed by the code) |
+| Sampling rate | 50 kHz (acquisition setting `srinv = 9`: fs = 500 kHz / (srinv + 1)) |
 | Recording length | 612,000 samples per channel (597 segments of 1024 samples) |
 
 ## Coordinate frame
@@ -36,9 +36,9 @@ Right-handed frame, in metres in the code and centimetres in the JSON files: X h
 |---|---|
 | `array.npy` | microphone positions in the array plane, shape `(32, 3)`, metres (converted to the scene frame by `cmf_uot.geometry.get_array_from_npy`) |
 | `mesure_manip{n}_all.npy` | configuration *n*, all four loudspeakers active |
-| `mesure_manip{n}_{k}.npy` | configuration *n*, loudspeaker *k* alone (k = 0…3) **TO CONFIRM** |
-| `mesure_manip_{d}m_*.npy` | additional series with the array at d = 3, 4, 5, 6 m (not used in the article) **TO CONFIRM** |
-| `mesure_reference_*.npy` | reference recording **TO CONFIRM** |
+| `mesure_manip{n}_{k}.npy` | configuration *n*, loudspeaker *k* alone (k = 0…3) |
+| `mesure_manip_{d}m_{all,k}.npy` | distance series: array moved to x = −d m, d = 3, 4, 5, 6 (source positions in `mesure_manip_array.json`); used in the ICASSP 2026 paper, not in this article |
+| `mesure_reference_{all,k}.npy` | additional reference recording, not used in the article |
 
 Configurations:
 

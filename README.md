@@ -39,7 +39,7 @@ cmf-uot-fusion/
 Requires Python ≥ 3.10 and [Poetry](https://python-poetry.org/docs/#installation).
 
 ```bash
-git clone https://github.com/OWNER/cmf-uot-fusion.git
+git clone https://github.com/ilyes-jaouedi/cmf-uot-fusion.git
 cd cmf-uot-fusion
 poetry install          # creates .venv and installs the package and its dependencies
 poetry run pytest       # optional: runs the unit tests

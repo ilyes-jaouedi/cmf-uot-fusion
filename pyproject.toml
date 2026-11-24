@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "https://github.com/OWNER/cmf-uot-fusion"
+repository = "https://github.com/ilyes-jaouedi/cmf-uot-fusion"
 
 [tool.poetry]
 packages = [{ include = "cmf_uot", from = "src" }]
