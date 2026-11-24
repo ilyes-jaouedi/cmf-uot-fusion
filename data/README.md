@@ -4,9 +4,9 @@ Recordings used in *On Sensor Array and Camera Fusion via Unbalanced Optimal Tra
 
 - **DOI:** https://doi.org/10.5281/zenodo.XXXXXXX
 - **License:** CC BY 4.0
-- **Size:** 7.1 GB (45 recordings of 157 MB each, plus camera and calibration files)
+- **Size:** 2.5 GB to download (44 recordings stored as compressed integer ADC counts, plus camera and calibration files)
 
-With the code repository (https://github.com/ilyes-jaouedi/cmf-uot-fusion), run `poetry run python -m cmf_uot.download` (add `--paper-only` for the 0.5 GB used in the article). Zenodo stores the files without folders; the download command puts them back in `waves/`, `camera_detections/` and `images/` (mapping in `folders.json`) and checks them against `checksums.sha256`. To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/folder`.
+With the code repository (https://github.com/ilyes-jaouedi/cmf-uot-fusion), run `poetry run python -m cmf_uot.download` (add `--paper-only` for the 0.2 GB used in the article). Zenodo stores the files without folders; the download command puts them back in `waves/`, `camera_detections/` and `images/` (mapping in `folders.json`), checks them against `checksums.sha256`, and rebuilds each recording as the float64 `.npy` file used in the article (see below). To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/folder`.
 
 Recorded on 23 July 2025. The published images have their GPS metadata removed, and a passer-by seen through a window in `ref_3.jpg` is blurred.
 
@@ -30,14 +30,27 @@ Right-handed frame, in metres in the code and centimetres in the JSON files: X h
 
 ### `waves/` — acoustic recordings
 
-`numpy` arrays, `float64`, shape `(612000, 32)` (samples × microphones).
+Each recording has shape `(612000, 32)` (samples × microphones). The acquisition system delivers 20-bit samples, so every value is an integer multiple of 7.08 × 10⁻⁶. On Zenodo each recording is a compressed NumPy archive `mesure_*.npz` holding
+
+- `counts`: the integer ADC counts, `int32`, shape `(612000, 32)`;
+- `scale`: `7.08e-6`;
+
+and the signal is `counts * scale` (float64). This is lossless: it reproduces the float64 arrays used in the article bit for bit, and the download command writes them back as `mesure_*.npy` files whose SHA-256 match `original_npy_checksums.sha256`. Without the code:
+
+```python
+import numpy as np
+with np.load("mesure_manip1_all.npz") as z:
+    x = z["counts"] * z["scale"]        # float64, shape (612000, 32)
+```
+
+The file names below are those of the reconstructed `.npy` files (`.npz` on Zenodo).
 
 | File | Content |
 |---|---|
 | `array.npy` | microphone positions in the array plane, shape `(32, 3)`, metres (converted to the scene frame by `cmf_uot.geometry.get_array_from_npy`) |
 | `mesure_manip{n}_all.npy` | configuration *n*, all four loudspeakers active |
 | `mesure_manip{n}_{k}.npy` | configuration *n*, loudspeaker *k* alone (k = 0…3) |
-| `mesure_manip_{d}m_{all,k}.npy` | distance series: array moved to x = −d m, d = 3, 4, 5, 6 (source positions in `mesure_manip_array.json`); used in the ICASSP 2026 paper, not in this article |
+| `mesure_manip_{d}m_{all,k}.npy` | distance series: array moved to x = −d m, d = 3, 4, 5, 6 (source positions in `mesure_manip_array.json`); used in the ICASSP 2026 paper, not in this article. `mesure_manip_5m_0` is missing: the stored file was damaged (its first 5 MiB were overwritten with zeros) |
 | `mesure_reference_{all,k}.npy` | additional reference recording, not used in the article |
 
 Configurations:
