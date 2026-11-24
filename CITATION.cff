@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "cmf-uot-fusion: sensor array and camera fusion via unbalanced optimal transport"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/OWNER/cmf-uot-fusion"
+authors:
+  - family-names: Jaouedi
+    given-names: Ilyes
+    orcid: "https://orcid.org/0009-0002-3445-8573"
+    affiliation: "Université Paris-Saclay, CNRS, CentraleSupélec, Laboratoire des signaux et systèmes"
+  - family-names: Chardon
+    given-names: Gilles
+    orcid: "https://orcid.org/0000-0003-0483-9957"
+    affiliation: "Université Paris-Saclay, CNRS, CentraleSupélec, Laboratoire des signaux et systèmes"
+  - family-names: Picheral
+    given-names: José
+    orcid: "https://orcid.org/0000-0001-9571-8151"
+    affiliation: "Université Paris-Saclay, CNRS, CentraleSupélec, Laboratoire des signaux et systèmes"
+preferred-citation:
+  type: article
+  title: "On Sensor Array and Camera Fusion via Unbalanced Optimal Transport"
+  authors:
+    - family-names: Jaouedi
+      given-names: Ilyes
+    - family-names: Chardon
+      given-names: Gilles
+    - family-names: Picheral
+      given-names: José
+  journal: "Signal Processing"
+  status: submitted
+  year: 2026

@@ -1,0 +1,36 @@
+[project]
+name = "cmf-uot"
+version = "1.0.0"
+description = "Sensor array and camera fusion via unbalanced optimal transport (CMF-UOT): code for the Signal Processing article"
+authors = [
+    { name = "Ilyes Jaouedi", email = "ilyes.jaouedi@centralesupelec.fr" },
+    { name = "Gilles Chardon" },
+    { name = "José Picheral" },
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+keywords = ["sensor fusion", "optimal transport", "array processing", "source localization", "Cramér-Rao bound"]
+dependencies = [
+    "numpy (>=1.26)",
+    "scipy (>=1.11)",
+    "matplotlib (>=3.8)",
+    "pandas (>=2.1)",
+    "tqdm (>=4.66)",
+]
+
+[project.urls]
+repository = "https://github.com/OWNER/cmf-uot-fusion"
+
+[tool.poetry]
+packages = [{ include = "cmf_uot", from = "src" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
