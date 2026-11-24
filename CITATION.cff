@@ -4,6 +4,14 @@ title: "cmf-uot-fusion: sensor array and camera fusion via unbalanced optimal tr
 version: 1.0.0
 license: MIT
 repository-code: "https://github.com/ilyes-jaouedi/cmf-uot-fusion"
+doi: 10.5281/zenodo.24506692
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24506692
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.24506693
+    description: "Version 1.0.0, used in the article"
 authors:
   - family-names: Jaouedi
     given-names: Ilyes

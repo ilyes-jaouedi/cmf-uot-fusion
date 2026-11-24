@@ -1,5 +1,8 @@
 # CMF-UOT: sensor array and camera fusion via unbalanced optimal transport
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24506692.svg)](https://doi.org/10.5281/zenodo.24506692)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Reference implementation of
 
 > I. Jaouedi, G. Chardon, J. Picheral, **On Sensor Array and Camera Fusion via Unbalanced Optimal Transport**, submitted to *Signal Processing* (Elsevier), 2026.
@@ -127,6 +130,8 @@ The two fusion variants are called as in the article:
 | CMF-UOT2 | `solvers/cmf_uot2.py` | `TransportOptimizer_numpy` | hard, b = P1 |
 
 ## Citation
+
+The code is archived on Zenodo: https://doi.org/10.5281/zenodo.24506692 (all versions; v1.0.0, the version used in the article: https://doi.org/10.5281/zenodo.24506693).
 
 If you use this code or the dataset, please cite the article (a `CITATION.cff` file is provided):
 
