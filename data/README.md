@@ -6,7 +6,9 @@ Recordings used in *On Sensor Array and Camera Fusion via Unbalanced Optimal Tra
 - **License:** CC BY 4.0
 - **Size:** 7.1 GB (45 recordings of 157 MB each, plus camera and calibration files)
 
-Download the record and extract it here, so that this folder contains `waves/`, `camera_detections/`, `images/`, `transformation_matrix_A.npy` and `references.json`. Alternatively, keep it anywhere and set `CMF_UOT_DATA=/path/to/folder`.
+With the code repository (https://github.com/OWNER/cmf-uot-fusion), run `poetry run python -m cmf_uot.download` (add `--paper-only` for the 0.5 GB used in the article). Zenodo stores the files without folders; the download command puts them back in `waves/`, `camera_detections/` and `images/` (mapping in `folders.json`) and checks them against `checksums.sha256`. To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/folder`.
+
+Recorded on 23 July 2025. The published images have their GPS metadata removed, and a passer-by seen through a window in `ref_3.jpg` is blurred.
 
 ## Experimental setup
 

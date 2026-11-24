@@ -51,7 +51,12 @@ The real-data experiments use the acoustic-camera dataset recorded for the artic
 
 > **Dataset DOI:** https://doi.org/10.5281/zenodo.XXXXXXX
 
-Download the archive and extract it into `data/` (layout and file description in [`data/README.md`](data/README.md)). To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/data`.
+```bash
+poetry run python -m cmf_uot.download --paper-only   # recordings used in the article (0.5 GB)
+poetry run python -m cmf_uot.download                # complete dataset (7.1 GB)
+```
+
+Files are placed in `data/` and checked against their SHA-256 checksums (layout and file description in [`data/README.md`](data/README.md)). To keep the data elsewhere, set `CMF_UOT_DATA=/path/to/data`.
 
 The simulation experiments do not need the dataset.
 
