@@ -2,7 +2,7 @@
 
 Recordings used in *On Sensor Array and Camera Fusion via Unbalanced Optimal Transport* (I. Jaouedi, G. Chardon, J. Picheral, submitted to *Signal Processing*).
 
-- **DOI:** https://doi.org/10.5281/zenodo.XXXXXXX
+- **DOI:** https://doi.org/10.5281/zenodo.24512049
 - **License:** CC BY 4.0
 - **Size:** 2.5 GB to download (44 recordings stored as compressed integer ADC counts, plus camera and calibration files)
 

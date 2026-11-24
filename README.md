@@ -52,7 +52,7 @@ poetry run pytest       # optional: runs the unit tests
 
 The real-data experiments use the acoustic-camera dataset recorded for the article (32-channel MEMS microphone array, four loudspeakers, one camera), available under CC BY 4.0:
 
-> **Dataset DOI:** https://doi.org/10.5281/zenodo.XXXXXXX
+> **Dataset DOI:** https://doi.org/10.5281/zenodo.24512049
 
 ```bash
 poetry run python -m cmf_uot.download --paper-only   # recordings used in the article (0.2 GB download)

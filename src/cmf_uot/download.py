@@ -22,7 +22,7 @@ import numpy as np
 
 from .paths import DATA_DIR
 
-ZENODO_RECORD = None  # set to the record id once the dataset is published, e.g. "1234567"
+ZENODO_RECORD = "24512049"  # https://doi.org/10.5281/zenodo.24512049
 
 # recordings used in the article: configurations 1 (standard), 2 (acoustic ambiguity), 4 (occlusion)
 PAPER_FILES = {"array.npy", "mesure_manip1_all.npy", "mesure_manip2_all.npy", "mesure_manip4_all.npy"}
