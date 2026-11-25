@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the article below."
 title: "cmf-uot-fusion: sensor array and camera fusion via unbalanced optimal transport"
-version: 1.0.0
+version: 1.0.1
 license: MIT
 repository-code: "https://github.com/ilyes-jaouedi/cmf-uot-fusion"
 doi: 10.5281/zenodo.24506692
@@ -11,7 +11,7 @@ identifiers:
     description: "All versions (concept DOI)"
   - type: doi
     value: 10.5281/zenodo.24506693
-    description: "Version 1.0.0, used in the article"
+    description: "Version 1.0.0"
 authors:
   - family-names: Jaouedi
     given-names: Ilyes
@@ -38,3 +38,15 @@ preferred-citation:
   journal: "Signal Processing"
   status: submitted
   year: 2026
+references:
+  - type: data
+    title: "Acoustic-camera dataset for sensor array and camera fusion via unbalanced optimal transport (CMF-UOT)"
+    doi: 10.5281/zenodo.24512049
+    license: CC-BY-4.0
+    authors:
+      - family-names: Jaouedi
+        given-names: Ilyes
+      - family-names: Chardon
+        given-names: Gilles
+      - family-names: Picheral
+        given-names: José

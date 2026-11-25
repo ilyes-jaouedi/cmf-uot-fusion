@@ -16,4 +16,4 @@ solvers     CMF and the two CMF-UOT variants (greedy coordinate descent)
 paths       repository, data and results folders
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"

@@ -1,6 +1,6 @@
 [project]
 name = "cmf-uot"
-version = "1.0.0"
+version = "1.0.1"
 description = "Sensor array and camera fusion via unbalanced optimal transport (CMF-UOT): code for the Signal Processing article"
 authors = [
     { name = "Ilyes Jaouedi", email = "ilyes.jaouedi@centralesupelec.fr" },
