@@ -131,7 +131,7 @@ The two fusion variants are called as in the article:
 
 ## Citation
 
-The code is archived on Zenodo: https://doi.org/10.5281/zenodo.24506692 (all versions; v1.0.0, the version used in the article: https://doi.org/10.5281/zenodo.24506693).
+The code is archived on Zenodo: https://doi.org/10.5281/zenodo.24506692 (all versions; v1.0.1, the version used in the article: https://doi.org/10.5281/zenodo.24528648).
 
 If you use this code or the dataset, please cite the article (a `CITATION.cff` file is provided):
 

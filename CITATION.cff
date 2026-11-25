@@ -12,6 +12,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24506693
     description: "Version 1.0.0"
+  - type: doi
+    value: 10.5281/zenodo.24528648
+    description: "Version 1.0.1, used in the article"
 authors:
   - family-names: Jaouedi
     given-names: Ilyes
